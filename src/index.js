@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import NameForm from './components/NameForm/index';
 
 function Square(props) {
     return (
@@ -102,6 +103,10 @@ class Game extends React.Component {
         });
     }
 
+    componentDidMount(){}
+
+    componentWillUnmount(){}
+
     render() {
         const history = this.state.history;
         const current = history[this.state.stepNumber];
@@ -127,6 +132,7 @@ class Game extends React.Component {
 
         return (
             <div className="game">
+                <NameForm></NameForm>,
                 <div className="game-board">
                     <Board
                         squares={current.squares}
@@ -141,6 +147,9 @@ class Game extends React.Component {
         );
     }
 }
+
+// -------------------------------------
+
 
 ReactDOM.render(
     <Game />,
