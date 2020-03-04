@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import NameForm from './components/NameForm/index';
+import Waterfall from './components/waterfall/index'
 
 function Square(props) {
     return (
@@ -123,6 +124,7 @@ class Game extends React.Component {
             )
         })
 
+
         let status;
         if(winner){
             status = 'Winner:' + winner;
@@ -152,6 +154,7 @@ class Game extends React.Component {
 
 
 ReactDOM.render(
-    <Game />,
+    // <Game />,
+    <Waterfall />,
     document.getElementById('root')
 );
