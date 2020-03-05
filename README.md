@@ -2,8 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### 该项目就是学习react的一些小demo
 - [x] ~~瀑布流特效~~
-- [ ] 放大镜特效
+- [x] ~~放大镜特效~~
 - [x] ~~普通表单操作~~
+- [ ] ...
 
 ## Available Scripts
 
