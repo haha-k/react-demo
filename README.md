@@ -1,10 +1,14 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ### 该项目就是学习react的一些小demo
-- [x] ~~瀑布流特效~~
-- [x] ~~放大镜特效~~
-- [x] ~~普通表单操作~~
-- [ ] ...
+- [x] ~~瀑布流特效demo~~
+- [x] ~~放大镜特效demo~~
+- [x] ~~普通react表单操作demo~~
+- [ ] 练习webpack配置
+- [ ] 模仿携程手机端页面(flex布局demo)
+- [ ] html5新标签demo(canvas,audio,video)
+- [ ] other demo
+
 
 ## Available Scripts
 
