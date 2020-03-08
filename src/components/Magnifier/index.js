@@ -1,6 +1,9 @@
 import React,{ forceUpdate } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import smallImgURL from './img/small.jpg';
+import bigImgURL from './img/big.png';
+
 
 class Magnifier extends React.Component {
     constructor(props) {
@@ -72,7 +75,7 @@ class Magnifier extends React.Component {
                 }}
                 ref={r => this.mask = r}
             ></div>
-            <img src="/img/small.jpg" alt=""/>
+            <img src={smallImgURL} alt=""/>
             </div>
             <div
                 id="big-box"
@@ -81,7 +84,7 @@ class Magnifier extends React.Component {
                 }}
                 ref = {r => this.big = r}
             >
-                <img ref="bigImg" src="/img/big.png"
+                <img ref="bigImg" src={bigImgURL}
                 style={{
                     left:this.state.mask.left*-(this.state.rate),
                     top:this.state.mask.top*-(this.state.rate)

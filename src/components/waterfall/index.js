@@ -1,6 +1,6 @@
 import React,{ forceUpdate } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
 
 class Box extends React.Component {
     constructor(props){

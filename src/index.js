@@ -12,5 +12,6 @@ import Game from './components/Game/index'
 ReactDOM.render(
     // <Game />,
     <Magnifier />,
+    // <Waterfall />,
     document.getElementById('root')
 );

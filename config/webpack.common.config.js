@@ -2,31 +2,41 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+    devtool: 'cheap-module-eval-source-map',
     entry: {
         index: './src/index.js',
-        framework:['react','react-dom'],
+        framework: ['react', 'react-dom'],
     },
     output: {
         filename: 'js/[name].[chunkhash:8].bundle.js',
-        path: path.resolve(__dirname,'../dist')
+        path: path.resolve(__dirname, '../dist'),
+        publicPath: '/assets/',
     },
-    module:{
-        rules:[
-            {
-                test:/\.(js|jsx)$/,
-                use:'babel-loader',
-                exclude:/node_modules/,
+    module: {
+        rules: [{
+                test: /\.(js|jsx)$/,
+                use: 'babel-loader',
+                exclude: /node_modules/,
             },
             {
-                test:/\.(css)$/,
-                use:[
-                    // 'style-loader',
-                    MiniCssExtractPlugin.loader,
+                test: /\.css$/,
+                use: [
+                    'style-loader',
                     'css-loader',
-                ],
-                exclude:/node_modules/,
+                    'postcss-loader'
+                ]
+            },
+            {
+                test: /\.(jpg|png|gif)$/,
+                use: {
+                    loader: 'url-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images/',
+                        // limit: 8192,
+                    },
+                }
             }
         ]
-
     },
 };

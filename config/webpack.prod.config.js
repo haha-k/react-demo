@@ -11,6 +11,18 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production',
+    module:{
+        rules:[
+            {
+                test:/\.(sass|scss)$/,
+                use: [
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader',
+                ],
+                exclude:/node_modules/,
+            },]},
     plugins: [
         new HtmlWebpackPlugin({
             //打包之后的html文件名字
