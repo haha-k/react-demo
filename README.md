@@ -4,8 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - [x] ~~瀑布流特效demo~~
 - [x] ~~放大镜特效demo~~
 - [x] ~~普通react表单操作demo~~
-- [ ] 练习webpack配置
-- [ ] 模仿携程手机端页面(flex布局demo)
+- [x] ~~练习webpack配置~~
+- [x] ~~模仿携程手机端页面(flex布局demo)~~
+- [x] ~~TypeScript demo~~
 - [ ] html5新标签demo(canvas,audio,video)
 - [ ] other demo
 

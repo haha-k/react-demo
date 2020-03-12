@@ -4,16 +4,26 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = {
     devtool: 'cheap-module-eval-source-map',
     entry: {
-        index: './src/index.js',
+        index: './src/index.tsx',
         framework: ['react', 'react-dom'],
+    },
+    resolve: {
+        alias: {
+            '@': path.resolve(__dirname, 'src/')
+        },
+        extensions: [".ts", ".tsx", ".js", ".jsx", ".json"]
     },
     output: {
         filename: 'js/[name].[chunkhash:8].bundle.js',
         path: path.resolve(__dirname, '../dist'),
-        publicPath: '/assets/',
     },
     module: {
         rules: [{
+                test: /\.tsx?$/,
+                loader: "awesome-typescript-loader",
+                exclude: /node_modules/,
+            },
+            {
                 test: /\.(js|jsx)$/,
                 use: 'babel-loader',
                 exclude: /node_modules/,
@@ -32,8 +42,10 @@ module.exports = {
                     loader: 'url-loader',
                     options: {
                         name: '[name].[ext]',
-                        outputPath: 'images/',
-                        // limit: 8192,
+                        esModule: false,
+                        outputPath: 'img/',
+                        publicPath: "/dist/img/",
+                        limit: 8192,
                     },
                 }
             }
