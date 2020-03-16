@@ -6,6 +6,7 @@ import Magnifier from "./components/Magnifier/index";
 import Game from "./components/Game/index";
 import TsDemo from "./components/TsDemo/index";
 import Trip from "./pages/trip/index";
+import MiShop from "./pages/mishop/index";
 
 // -------------------------------------
 
@@ -14,6 +15,7 @@ ReactDOM.render(
   // <Magnifier />,
   // <Waterfall />,
   // <TsDemo />,
-  <Trip />,
+  // <Trip />,
+  <MiShop />,
   document.getElementById("root") as HTMLElement
 );

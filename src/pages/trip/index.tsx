@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./index.scss";
-import "./normalize.scss";
+import "../../style/normalize.scss";
 import bannerImg from "./img/focus.jpg";
 import { navItem, subNavItem, link } from "./mockData/data";
 import projectImgs from "./img/index";
